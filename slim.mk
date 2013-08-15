@@ -8,17 +8,23 @@ PRODUCT_RELEASE_NAME := t0lteatt
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
-# Inherit some common CM stuff.
+# Inherit some common Slim stuff.
 $(call inherit-product, vendor/slim/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/t0lteatt/full_t0lteatt.mk)
 
+# Inherit torch settings
+$(call inherit-product, vendor/slim/config/common_ledflash.mk)
+
+# Inherit device settings
+$(call inherit-product, vendor/slim/config/common_sgs.mk)
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := t0lteatt
 PRODUCT_NAME := slim_t0lteatt
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SAMSUNG-SGH-I317
+PRODUCT_MODEL := SGH-I317
 PRODUCT_MANUFACTURER := samsung
 
 # Set build fingerprint / ID / Product Name ect.
