@@ -17,9 +17,6 @@ $(call inherit-product, device/samsung/t0lteatt/full_t0lteatt.mk)
 # Inherit torch settings
 $(call inherit-product, vendor/slim/config/common_ledflash.mk)
 
-# Inherit device settings
-$(call inherit-product, vendor/slim/config/common_sgs.mk)
-
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := t0lteatt
 PRODUCT_NAME := slim_t0lteatt
