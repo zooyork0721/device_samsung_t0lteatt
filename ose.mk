@@ -5,18 +5,18 @@ TARGET_SCREEN_WIDTH := 720
 # Inherit device configuration
 $(call inherit-product, device/samsung/t0lteatt/full_t0lteatt.mk)
 
-# Inherit some common Slim stuff.
-$(call inherit-product, vendor/slim/config/common_full_phone.mk)
+# Inherit some common OSE stuff.
+$(call inherit-product, vendor/ose/config/common_full_phone.mk)
 
 # Specify phone tech before including full_phone
-$(call inherit-product, vendor/slim/config/gsm.mk)
+$(call inherit-product, vendor/ose/config/gsm.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := t0lteatt
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := t0lteatt
-PRODUCT_NAME := slim_t0lteatt
+PRODUCT_NAME := ose_t0lteatt
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SGH-I317
 PRODUCT_MANUFACTURER := samsung
